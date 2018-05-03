@@ -8,7 +8,7 @@ FROM inlineno1/centos7:0.1
 # gpgcheck=1
 # gpgkey=https://packages.erlang-solutions.com/rpm/erlang_solutions.asc
 # enabled=1
-RUN echo -e "\n[erlang-solutions]\nname=Centos \$releasever - \$basearch - Erlang Solutions\nbaseurl=https://packages.erlang-solutions.com/rpm/\ncentos/\$releasever/\$basearch\ngpgcheck=1\ngpgkey=https://packages.erlang-solutions.com/rpm/erlang_solutions.asc\nenabled=1" >> /etc/yum.repos.d/epel.repo
+RUN echo -e "\n[erlang-solutions]\nname=Centos \$releasever - \$basearch - Erlang Solutions\nbaseurl=https://packages.erlang-solutions.com/rpm/centos/\$releasever/\$basearch\ngpgcheck=1\ngpgkey=https://packages.erlang-solutions.com/rpm/erlang_solutions.asc\nenabled=1" >> /etc/yum.repos.d/epel.repo
 
 # erlang install
 RUN yum -y install erlang
