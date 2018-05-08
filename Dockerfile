@@ -14,7 +14,7 @@ RUN echo -e "\n[erlang-solutions]\nname=Centos \$releasever - \$basearch - Erlan
 RUN yum -y install erlang
 
 # rabbitmq install
-RUN rpm --import https://dl.bintray.com/rabbitmq/all/rabbitmq-server/3.7.4/rabbitmq-server-3.7.4-1.el7.noarch.rpm.asc
+RUN rpm --import https://dl.bintray.com/rabbitmq/Keys/rabbitmq-release-signing-key.asc
 RUN wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.7.4/rabbitmq-server-3.7.4-1.el7.noarch.rpm && \
     yum -y install rabbitmq-server-3.7.4-1.el7.noarch.rpm && rm rabbitmq-server-3.7.4-1.el7.noarch.rpm
 
