@@ -20,3 +20,6 @@ RUN wget https://github.com/rabbitmq/rabbitmq-server/releases/download/v3.7.4/ra
 
 # management plugin enable -> http://localhost:15672/
 RUN rabbitmq-plugins enable rabbitmq_management
+
+# port
+EXPOSE 15672
